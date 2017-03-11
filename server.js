@@ -48,6 +48,7 @@
 //Отладка под браузером Chrome
 //для этого нужно установить утилиту node инспектор
 //npm i -g node-inspector
+//node --debug server.js
 //Шаг 1. node-inspector - это web-server, к которому можно подсоединиться
 //я буду пересылать команды web-server-у, а node-inspector будет транслировать node,
 //которая слушает протокол отладки(используя язык отладки v8)
@@ -70,7 +71,7 @@ server.on('request', function (req, res) {
     res.end('Page no found')
 });
 
-server.listen(1337, '127.0.0.1');
+server.listen(1337);
 console.log('Server is running');
 //************
 
